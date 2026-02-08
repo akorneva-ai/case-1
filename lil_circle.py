@@ -32,3 +32,4 @@ def paralelogram(x, y):
     lt(45)
     end_fill()
     up()
+print(привет семе)
