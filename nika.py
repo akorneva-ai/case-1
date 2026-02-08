@@ -15,6 +15,9 @@ def triangle_small(x, y):
     rt(120)
     end_fill()
     pu()
+    rt(60)
+    fd(50)
+    lt(60)
 def square_small(x,y):
     color("yellow", "yellow")
     begin_fill()
@@ -30,4 +33,7 @@ def square_small(x,y):
     rt(90)
     end_fill()
     pu()
+    rt(90)
+    fd(50)
+    lt(90)
 done()
