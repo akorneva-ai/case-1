@@ -26,3 +26,30 @@ def triangle_isosceles(x, y, a, b):
     lt(180 - angle_base)
     end_fill()
     pu()
+def rectangle(x, y, w, h):
+    """
+    Function, drawing rectangle.
+    :param x: upper left corner coordinate x
+    :param y: upper left corner coordinate y
+    :param w: width of a rectangle
+    :param h: height of a rectangle
+    :return: None
+    """
+    goto(x,y)
+    color("purple", "purple")
+    begin_fill()
+    pd()
+    fd(w)
+    rt(90)
+    fd(h)
+    rt(90)
+    fd(w)
+    rt(90)
+    fd(h)
+    rt(90)
+    end_fill()
+    pu()
+
+
+done()
+hideturtle()
