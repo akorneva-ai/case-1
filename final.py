@@ -84,6 +84,13 @@ def big_rectangleFill(x, y, b, c):
     end_fill()
     setheading(0)
     penup()
-
+def Circle(x, y, z):
+    goto(x, y)
+    down()
+    begin_fill()
+    circle(z)
+    fillcolor('green')
+    end_fill()
+    up()
 done()
 hideturtle()
