@@ -3,6 +3,7 @@ import math
 shape("turtle")
 pensize(1)
 pu()
+
 def triangle_isosceles(x, y, a, b):
     """
     Function, drawing isosceles triangle.
@@ -26,6 +27,7 @@ def triangle_isosceles(x, y, a, b):
     lt(180 - angle_base)
     end_fill()
     pu()
+
 def rectangle(x, y, w, h):
     """
     Function, drawing rectangle.
@@ -54,36 +56,52 @@ def rectangle(x, y, w, h):
 #ф-ция квадрата
 pensize(1)
 
-def big_squareFill(x, y, a):
+def big_squareFill(x, y, s):
+
+    """"
+    Function, drawing square.
+    :param x: upper left corner coordinate x
+    :param y: upper left corner coordinate y
+    :param s: sides of the square
+    :return: None
+    """
+
     penup()
     goto(x, y)
     pendown()
     color("orange", "orange")
     begin_fill()
     for i in range(4):
-        forward(a)
+        forward(s)
         left(90)
     end_fill()
     penup()
 
 #ф-ция прям-ного трегольника
-def big_rectangleFill(x, y, b, c):
+def right_angled_triangleFill(x, y, j, c):
+
+    """"
+    Function, drawing right angle triangle.
+    :param x: upper left corner coordinate x
+    :param y: upper left corner coordinate y
+    :param j: sides of the triangle
+    :param c: sides of the triangle
+    :return: None
+    """
+
     penup()
     goto(x, y)
-    setheading(0)
     pendown()
-    color("red", "red")
+    color("black", "black")
     begin_fill()
-    forward(b)
+    forward(j)  #первый катет
     left(90)
-    forward(c)
-    left(90)
-    forward(b)
-    left(90)
-    forward(c)
+    forward(c)  #второй катет
+    goto(x, y)  #вернуться к началу (гипотенуза)
     end_fill()
-    setheading(0)
     penup()
+
+
 def Circle(x, y, z):
     '''
     Function, drawing green circle.
@@ -99,6 +117,7 @@ def Circle(x, y, z):
     fillcolor('green')
     end_fill()
     up()
+
 def paralelogram(x, y, z, w):
     '''
     Function, drawing turquoise parallelogram.
@@ -123,6 +142,7 @@ def paralelogram(x, y, z, w):
     lt(45)
     end_fill()
     up()
+
 def triangle_pr(x, y, z):
     '''
     Function, drawing crimson right triangle.
@@ -143,6 +163,7 @@ def triangle_pr(x, y, z):
     lt(90)
     end_fill()
     up()
+
 def hvost(x, y, z):
     '''
     Function, drawing grey triangle.
