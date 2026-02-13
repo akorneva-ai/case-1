@@ -85,6 +85,13 @@ def big_rectangleFill(x, y, b, c):
     setheading(0)
     penup()
 def Circle(x, y, z):
+    '''
+    Function, drawing green circle.
+    :param x: lower left corner coordinate x
+    :param y: lower left corner coordinate y
+    :param z: radius of circle
+    :return: None
+    '''
     goto(x, y)
     down()
     begin_fill()
@@ -93,6 +100,14 @@ def Circle(x, y, z):
     end_fill()
     up()
 def paralelogram(x, y, z, w):
+    '''
+    Function, drawing turquoise parallelogram.
+    :param x: lower left corner coordinate x
+    :param y: lower left corner coordinate y
+    :param z: first side of parallelogram
+    :param w: second side of parallelogram
+    :return: None
+    '''
     goto(x, y)
     down()
     begin_fill()
@@ -109,6 +124,13 @@ def paralelogram(x, y, z, w):
     end_fill()
     up()
 def triangle_pr(x, y, z):
+    '''
+    Function, drawing crimson right triangle.
+    :param x: lower left corner coordinate x
+    :param y: lower left corner coordinate y
+    :param z: the size of triangle
+    :return: None
+    '''
     goto(x, y)
     down()
     begin_fill()
@@ -122,6 +144,13 @@ def triangle_pr(x, y, z):
     end_fill()
     up()
 def hvost(x, y, z):
+    '''
+    Function, drawing grey triangle.
+    :param x: lower left corner coordinate x
+    :param y: lower left corner coordinate y
+    :param z: the size of triangle
+    :return: None
+    '''
     goto(x,y)
     down()
     begin_fill()
@@ -135,5 +164,6 @@ def hvost(x, y, z):
     lt(40)
     end_fill()
     up()
+
 done()
 hideturtle()
