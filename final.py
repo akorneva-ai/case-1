@@ -54,19 +54,15 @@ def rectangle(x, y, w, h):
 
 
 #ф-ция квадрата
-pensize(1)
+def square(x, y, s):
 
-def big_squareFill(x, y, s):
-
-    """"
+    """
     Function, drawing square.
     :param x: upper left corner coordinate x
     :param y: upper left corner coordinate y
     :param s: sides of the square
     :return: None
     """
-
-    penup()
     goto(x, y)
     pendown()
     color("orange", "orange")
@@ -78,7 +74,7 @@ def big_squareFill(x, y, s):
     penup()
 
 #ф-ция прям-ного трегольника
-def right_angled_triangleFill(x, y, j, c):
+def right_angled_triangle(x, y, j, c):
 
     """"
     Function, drawing right angle triangle.
