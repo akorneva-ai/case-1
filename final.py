@@ -130,8 +130,23 @@ def paralelogram(x, y, z, w):
     lt(45)
     end_fill()
     up()
-    
-
+def equilateral_triangle(x, y, z):
+    '''
+    Function, drawing equilateral triangle.
+    :param x: left bottom corner of the pink equilateral triangle
+    :param y: left bottom corner of the pink equilateral triangle
+    :param z: length of the pink equilateral triangle side
+    :return: None
+    '''
+    goto(x, y)
+    color('white', 'pink')
+    begin_fill()
+    pd()
+    for i in range(3):
+        fd(z)
+        lt(120)
+    end_fill()
+    pu()
 def cat(x, y):
     #туловище кота
     rectangle(0, 0, 100, 50)
