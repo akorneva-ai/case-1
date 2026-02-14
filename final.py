@@ -16,7 +16,7 @@ def triangle_isosceles(x, y, a, b):
     angle_base = math.degrees(math.acos(a / (2*b))) #угол при основании
     angle_top = 180 - 2 * angle_base #угол при вершине
     goto(x, y)
-    color("red", "red")
+    color("white", "red")
     begin_fill()
     pd()
     fd(a)
@@ -38,7 +38,7 @@ def rectangle(x, y, w, h):
     :return: None
     """
     goto(x,y)
-    color("purple", "purple")
+    color("white", "purple")
     begin_fill()
     pd()
     fd(w)
@@ -52,9 +52,7 @@ def rectangle(x, y, w, h):
     end_fill()
     pu()
 
-#ф-ция квадрата
 def square(x, y, s):
-
     """
     Function, drawing square.
     :param x: upper left corner coordinate x
@@ -64,7 +62,7 @@ def square(x, y, s):
     """
     goto(x, y)
     pendown()
-    color("orange", "orange")
+    color("white", "orange")
     begin_fill()
     for i in range(4):
         forward(s)
@@ -72,9 +70,7 @@ def square(x, y, s):
     end_fill()
     penup()
 
-#ф-ция прям-ного трегольника
 def right_angled_triangle(x, y, j, c):
-
     """"
     Function, drawing right angle triangle.
     :param x: upper left corner coordinate x
@@ -83,11 +79,9 @@ def right_angled_triangle(x, y, j, c):
     :param c: sides of the triangle
     :return: None
     """
-
-    penup()
     goto(x, y)
     pendown()
-    color("black", "black")
+    color("white", "black")
     begin_fill()
     forward(j)  #первый катет
     left(90)
@@ -104,11 +98,11 @@ def Circle(x, y, z):
     :param z: radius of circle
     :return: None
     '''
+    color('white','green')
     goto(x, y)
     down()
     begin_fill()
     circle(z)
-    fillcolor('green')
     end_fill()
     up()
 
@@ -124,7 +118,7 @@ def paralelogram(x, y, z, w):
     goto(x, y)
     down()
     begin_fill()
-    fillcolor('turquoise')
+    color('white', 'turquoise')
     lt(90)
     fd(z)
     lt(45)
@@ -136,6 +130,23 @@ def paralelogram(x, y, z, w):
     lt(45)
     end_fill()
     up()
+
+def cat(x, y):
+    #туловище кота
+    rectangle(0, 0, 100, 50)
+    #ноги кота
+    square(x+30, y-50, -30)
+    square(x+100, y-50, -30)
+    #голова кота
+    square(x+100, y-25, 50)
+    #часть хвоста кота
+    rectangle(x-50, y+15, 50, 25)
+    #часть хвоста кота
+    paralelogram(x-50, y-12, 25, 35)
+    #конец хвоста
+
+def apple(x, y, z):
+    Circle(x, y, z)
 
 done()
 hideturtle()
