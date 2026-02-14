@@ -130,6 +130,7 @@ def paralelogram(x, y, z, w):
     lt(45)
     end_fill()
     up()
+    
 
 def cat(x, y):
     #туловище кота
