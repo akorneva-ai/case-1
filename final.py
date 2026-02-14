@@ -52,7 +52,6 @@ def rectangle(x, y, w, h):
     end_fill()
     pu()
 
-
 #ф-ция квадрата
 def square(x, y, s):
 
@@ -97,7 +96,6 @@ def right_angled_triangle(x, y, j, c):
     end_fill()
     penup()
 
-
 def Circle(x, y, z):
     '''
     Function, drawing green circle.
@@ -136,49 +134,6 @@ def paralelogram(x, y, z, w):
     lt(45)
     fd(w)
     lt(45)
-    end_fill()
-    up()
-
-def triangle_pr(x, y, z):
-    '''
-    Function, drawing crimson right triangle.
-    :param x: lower left corner coordinate x
-    :param y: lower left corner coordinate y
-    :param z: the size of triangle
-    :return: None
-    '''
-    goto(x, y)
-    down()
-    begin_fill()
-    fillcolor('crimson')
-    fd(z * 3 ** 0.5)
-    lt(150)
-    fd(z*2)
-    lt(120)
-    fd(z*1)
-    lt(90)
-    end_fill()
-    up()
-
-def hvost(x, y, z):
-    '''
-    Function, drawing grey triangle.
-    :param x: lower left corner coordinate x
-    :param y: lower left corner coordinate y
-    :param z: the size of triangle
-    :return: None
-    '''
-    goto(x,y)
-    down()
-    begin_fill()
-    fillcolor('grey')
-    lt(120)
-    fd(z)
-    lt(100)
-    fd(z*0.347)
-    lt(100)
-    fd(z)
-    lt(40)
     end_fill()
     up()
 
