@@ -4,19 +4,21 @@ shape("turtle")
 pensize(1)
 pu()
 
-def triangle_isosceles(x, y, a, b):
+def triangle_isosceles(x, y, a, b, contour, col):
     """
     Function, drawing isosceles triangle.
     :param x: x coordinate in the left corner of the base
     :param y: y coordinate in the left corner of the base
     :param a: length of the triangle base
     :param b: length of the sides of the triangle
+    :param contour: contour of the triangle
+    :param col: color of the triangle
     :return: None
     """
     angle_base = math.degrees(math.acos(a / (2*b))) #угол при основании
     angle_top = 180 - 2 * angle_base #угол при вершине
     goto(x, y)
-    color("white", "red")
+    color(contour, col)
     begin_fill()
     pd()
     fd(a)
@@ -28,17 +30,19 @@ def triangle_isosceles(x, y, a, b):
     end_fill()
     pu()
 
-def rectangle(x, y, w, h):
+def rectangle(x, y, w, h, contour, col):
     """
     Function, drawing rectangle.
     :param x: upper left corner coordinate x
     :param y: upper left corner coordinate y
     :param w: width of a rectangle
     :param h: height of a rectangle
+    :param contour: contour of the triangle
+    :param col: color of the triangle
     :return: None
     """
     goto(x,y)
-    color("white", "purple")
+    color(contour, col)
     begin_fill()
     pd()
     fd(w)
@@ -51,18 +55,19 @@ def rectangle(x, y, w, h):
     rt(90)
     end_fill()
     pu()
-
-def square(x, y, s):
+def square(x, y, s, contour, col):
     """
     Function, drawing square.
     :param x: upper left corner coordinate x
     :param y: upper left corner coordinate y
     :param s: sides of the square
+    :param contour: contour of the triangle
+    :param col: color of the triangle
     :return: None
     """
     goto(x, y)
     pendown()
-    color("white", "orange")
+    color(contour, col)
     begin_fill()
     for i in range(4):
         forward(s)
@@ -70,18 +75,20 @@ def square(x, y, s):
     end_fill()
     penup()
 
-def right_angled_triangle(x, y, j, c):
+def right_angled_triangle(x, y, j, c, contour, col):
     """"
     Function, drawing right angle triangle.
     :param x: upper left corner coordinate x
     :param y: upper left corner coordinate y
     :param j: sides of the triangle
     :param c: sides of the triangle
+    :param contour: contour of the triangle
+    :param col: color of the triangle
     :return: None
     """
     goto(x, y)
     pendown()
-    color("white", "black")
+    color(contour, col)
     begin_fill()
     forward(j)  #первый катет
     left(90)
@@ -90,15 +97,17 @@ def right_angled_triangle(x, y, j, c):
     end_fill()
     penup()
 
-def Circle(x, y, z):
+def Circle(x, y, z, contour, col):
     """
     Function, drawing green circle.
     :param x: lower left corner coordinate x
     :param y: lower left corner coordinate y
     :param z: radius of circle
+    :param contour: contour of the triangle
+    :param col: color of the triangle
     :return: None
     """
-    color('white','green')
+    color(contour, col)
     goto(x, y)
     down()
     begin_fill()
@@ -106,19 +115,21 @@ def Circle(x, y, z):
     end_fill()
     up()
 
-def paralelogram(x, y, z, w):
+def paralelogram(x, y, z, w, contour, col):
     """
-    Function, drawing turquoise parallelogram.
+    Function, drawing parallelogram.
     :param x: lower left corner coordinate x
     :param y: lower left corner coordinate y
     :param z: first side of parallelogram
     :param w: second side of parallelogram
+    :param contour: contour of the triangle
+    :param col: color of the triangle
     :return: None
     """
     goto(x, y)
     down()
     begin_fill()
-    color('white', 'turquoise')
+    color(contour, col)
     lt(90)
     fd(z)
     lt(45)
@@ -130,16 +141,18 @@ def paralelogram(x, y, z, w):
     lt(45)
     end_fill()
     up()
-def equilateral_triangle(x, y, z):
+def equilateral_triangle(x, y, z, contour, col):
     """
     Function, drawing equilateral triangle.
     :param x: left bottom corner of the pink equilateral triangle
     :param y: left bottom corner of the pink equilateral triangle
     :param z: length of the pink equilateral triangle side
+    :param contour: contour of the triangle
+    :param col: color of the triangle
     :return: None
     """
     goto(x, y)
-    color('white', 'pink')
+    color(contour, col)
     begin_fill()
     pd()
     for i in range(3):
