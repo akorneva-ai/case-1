@@ -229,6 +229,29 @@ def raketa(x, y, a, b, c, l, d,  e, f, g, h, i):
     right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5+f-25, y +21 + b + l, e, f, g)
     rt(180)
     equilateral_triangle(x+(a**2-b**2)**0.5-24, y +b +l + e+21, h, i)
+#функция светофора
+def svetofor(x, y):
+    #большой прямоугольник
+    rectangle(x, y, 100, 200, "gray")
+    Circle(x + 50, y - 65, 30, "red")  #верхний красный
+    Circle(x + 50, y - 130, 30, "yellow")  #средний желтый
+    Circle(x + 50, y - 195, 30, "green")  #нижний зеленый
+    #нижний прямоугольник
+    rectangle(x + 30, y - 200, 40, 60, "gray")
+svetofor(200, 0)
+#функция чела
+def chel(x,y):
+    #голова
+    square(x,y, 50, "black")
+    #туловище
+    equilateral_triangle(x - 15, y - 40 * math.sqrt(3), 80, "yellow")
+    # руки
+    equilateral_triangle(x - 15,y - 20 * math.sqrt(3), 20, "black")
+    equilateral_triangle(x + 45, y - 20 * math.sqrt(3), 20, "black")
+    # ноги
+    square(x, y - 40 * math.sqrt(3) - 15, 15, "black")
+    square(x + 30, y - 40 * math.sqrt(3) - 15, 15, "black")
+chel(100, 100)
 
 hideturtle()
 done()
