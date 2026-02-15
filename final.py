@@ -91,13 +91,13 @@ def right_angled_triangle(x, y, j, c):
     penup()
 
 def Circle(x, y, z):
-    '''
+    """
     Function, drawing green circle.
     :param x: lower left corner coordinate x
     :param y: lower left corner coordinate y
     :param z: radius of circle
     :return: None
-    '''
+    """
     color('white','green')
     goto(x, y)
     down()
@@ -107,14 +107,14 @@ def Circle(x, y, z):
     up()
 
 def paralelogram(x, y, z, w):
-    '''
+    """
     Function, drawing turquoise parallelogram.
     :param x: lower left corner coordinate x
     :param y: lower left corner coordinate y
     :param z: first side of parallelogram
     :param w: second side of parallelogram
     :return: None
-    '''
+    """
     goto(x, y)
     down()
     begin_fill()
@@ -131,13 +131,13 @@ def paralelogram(x, y, z, w):
     end_fill()
     up()
 def equilateral_triangle(x, y, z):
-    '''
+    """
     Function, drawing equilateral triangle.
     :param x: left bottom corner of the pink equilateral triangle
     :param y: left bottom corner of the pink equilateral triangle
     :param z: length of the pink equilateral triangle side
     :return: None
-    '''
+    """
     goto(x, y)
     color('white', 'pink')
     begin_fill()
@@ -164,5 +164,27 @@ def cat(x, y):
 def apple(x, y, z):
     Circle(x, y, z)
 
+#функция домика
+def house(x, y):
+    square(x, y,100)
+    square(x+25, y+25, 50)
+    lt(135)
+    right_angled_triangle(x+125, y+100, 106, 106)
+    lt(135)
+    Circle(x+50, y+120, 15)
+#house(100,100)
+
+#функция рыбки
+def fish(x, y):
+    lt(45)
+    right_angled_triangle(x, y, 106, 106)
+    lt(90)
+    right_angled_triangle(x, y+150, 106,106)
+    lt(90)
+    right_angled_triangle(x-150, y, 106, 106)
+    rt(135)
+    Circle(x+25, y+70, 10)
+
+#fish(-200,100)
 done()
 hideturtle()
