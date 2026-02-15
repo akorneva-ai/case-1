@@ -53,6 +53,7 @@ def rectangle(x, y, w, h, col):
     rt(90)
     end_fill()
     pu()
+
 def square(x, y, s, col):
     """
     Function, drawing square.
@@ -135,6 +136,7 @@ def paralelogram(x, y, z, w, col):
     lt(45)
     end_fill()
     up()
+
 def equilateral_triangle(x, y, z, col):
     """
     Function, drawing equilateral triangle.
@@ -153,22 +155,29 @@ def equilateral_triangle(x, y, z, col):
         lt(120)
     end_fill()
     pu()
-def cat(x, y):
-    #туловище кота
-    rectangle(0, 0, 100, 50)
-    #ноги кота
-    square(x+30, y-50, -30)
-    square(x+100, y-50, -30)
-    #голова кота
-    square(x+100, y-25, 50)
-    #часть хвоста кота
-    rectangle(x-50, y+15, 50, 25)
-    #часть хвоста кота
-    paralelogram(x-50, y-12, 25, 35)
-    #конец хвоста
 
-def apple(x, y, z):
-    Circle(x, y, z)
+# ф-ция кощщки
+def cat(x, y):
+    rectangle(0, 0, 100, 50, "orange")
+    rectangle(x + 30, 0, 40, 50, "black")
+    square(x + 30, y - 50, -30, "orange")
+    square(x + 100, y - 50, -30, "orange")
+    square(x + 100, y - 25, 50, "orange")
+    rectangle(x - 50, y + 15, 50, 25, "black")
+    paralelogram(x - 50, y - 12.4, 25, 35, "orange")
+    setheading(-30)
+    equilateral_triangle(x - 96, y + 25, 25, "black")
+    setheading(0)
+    equilateral_triangle(x + 125, y + 25, 25, "black")
+cat(200, 200)
+
+#ф-ция яблока
+def apple(x, y):
+    Circle(0, 0, 50, "green")
+    setheading(-60)
+    equilateral_triangle(x - 12.5, y + 121.6, 25, "brown")
+    setheading(0)
+apple(0, 0)
 
 #функция домика
 def house(x, y):
@@ -190,7 +199,7 @@ def fish(x, y):
     right_angled_triangle(x-150, y, 106, 106, "orange")
     rt(135)
     Circle(x+25, y+70, 15, "indigo")
-
 fish(-200,100)
+
 hideturtle()
 done()
