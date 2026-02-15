@@ -201,5 +201,34 @@ def fish(x, y):
     Circle(x+25, y+70, 15, "indigo")
 fish(-200,100)
 
+#ф-ция лисички
+def lisiza(x,y, a, b, c, d, e, f, g, h, i, k):
+    equilateral_triangle(x, y, a, b)
+    rt(150)
+    triangle_isosceles(x-(math.cos(1.25664)*120)+2, y+(math.sin(1.25664) * 120)-2, c, d, e)
+    rt(118.02+90)
+    Circle(x+a/2, y+((a**2-(a/2)**2)**0.5), f, g)
+    right_angled_triangle(x, y + ((a ** 2 - (a / 2) ** 2) ** 0.5) + 1.75 * (f), h, i, k)
+    right_angled_triangle(x + a - 10, y + ((a ** 2 - (a / 2) ** 2) ** 0.5) + 1.75 * (f) - 25, h, i, k)
+    lt(180)
+
+#ф-ция ракеты
+def raketa(x, y, a, b, c, l, d,  e, f, g, h, i):
+    rt(45)
+    paralelogram(x, y, a, b, c)
+    lt(45)
+    square(x+(a**2-b**2)**0.5-16, y+b+21, l, d)
+    rt(90)
+    right_angled_triangle(x+(a**2-b**2)**0.5+l-16, y+l+21+l, e, f, g)
+    lt(90)
+    right_angled_triangle(x+(a**2-b**2)**0.5+l+f-16, y+21, e, f, g)
+    rt(180)
+    rt(90)
+    right_angled_triangle(x+(a**2-b**2)**0.5-25, y+b+l+e+21, e, f, g)
+    lt(90)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5+f-25, y +21 + b + l, e, f, g)
+    rt(180)
+    equilateral_triangle(x+(a**2-b**2)**0.5-24, y +b +l + e+21, h, i)
+
 hideturtle()
 done()
