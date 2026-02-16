@@ -238,7 +238,7 @@ def svetofor(x, y):
     Circle(x + 50, y - 195, 30, "green")  #нижний зеленый
     #нижний прямоугольник
     rectangle(x + 30, y - 200, 40, 60, "gray")
-svetofor(200, 0)
+svetofor(0, -80)
 #функция чела
 def chel(x,y):
     #голова
@@ -251,7 +251,7 @@ def chel(x,y):
     # ноги
     square(x, y - 40 * math.sqrt(3) - 15, 15, "black")
     square(x + 30, y - 40 * math.sqrt(3) - 15, 15, "black")
-chel(100, 100)
+chel(-200, -200)
 
 hideturtle()
 done()
