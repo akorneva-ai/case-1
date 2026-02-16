@@ -14,7 +14,7 @@ def triangle_isosceles(x, y, a, b, col):
     :param col: color of the triangle
     :return: None
     """
-    angle_base = math.degrees(math.acos(a / (2*b))) #угол при основании
+    angle_base = math.degrees(math.acos(a / (2 * b))) #угол при основании
     angle_top = 180 - 2 * angle_base #угол при вершине
     goto(x, y)
     color("white", col)
@@ -58,7 +58,7 @@ def square(x, y, s, col):
     """
     Function, drawing square.
     :param x: upper left corner coordinate x
-    :param y: upper left corner coordinate y
+    :param y: upper left corner coordinate yl
     :param s: sides of the square
     :param col: color of the triangle
     :return: None
@@ -182,11 +182,11 @@ apple(0, 0)
 #функция домика
 def house(x, y):
     square(x, y,100,"pink")
-    square(x+25, y+25, 50, "azure")
+    square(x + 25, y + 25, 50, "azure")
     lt(135)
-    right_angled_triangle(x+125, y+100, 106, 106, "rosy brown")
+    right_angled_triangle(x + 125, y + 100, 106, 106, "rosy brown")
     lt(135)
-    Circle(x+50, y+120, 15, "light cyan")
+    Circle(x + 50, y + 120, 15, "light cyan")
 house(100,100)
 
 #функция рыбки
@@ -194,41 +194,42 @@ def fish(x, y):
     lt(45)
     right_angled_triangle(x, y, 106, 106, "orange")
     lt(90)
-    right_angled_triangle(x, y+150, 106,106, "orange")
+    right_angled_triangle(x, y + 150, 106,106, "orange")
     lt(90)
-    right_angled_triangle(x-150, y, 106, 106, "orange")
+    right_angled_triangle(x - 150, y, 106, 106, "orange")
     rt(135)
-    Circle(x+25, y+70, 15, "indigo")
+    Circle(x + 25, y + 70, 15, "indigo")
 fish(-200,100)
 
-#ф-ция лисички
+#функция лисички
 def lisiza(x,y, a, b, c, d, e, f, g, h, i, k):
     equilateral_triangle(x, y, a, b)
     rt(150)
-    triangle_isosceles(x-(math.cos(1.25664)*120)+2, y+(math.sin(1.25664) * 120)-2, c, d, e)
+    triangle_isosceles(x-(math.cos(1.25664) * 120) + 2, y+(math.sin(1.25664) * 120) - 2, c, d, e)
     rt(118.02+90)
-    Circle(x+a/2, y+((a**2-(a/2)**2)**0.5), f, g)
+    Circle(x +a / 2, y + ((a ** 2 - (a / 2) ** 2) **0.5), f, g)
     right_angled_triangle(x, y + ((a ** 2 - (a / 2) ** 2) ** 0.5) + 1.75 * (f), h, i, k)
     right_angled_triangle(x + a - 10, y + ((a ** 2 - (a / 2) ** 2) ** 0.5) + 1.75 * (f) - 25, h, i, k)
     lt(180)
 
-#ф-ция ракеты
+#функция ракеты
 def raketa(x, y, a, b, c, l, d,  e, f, g, h, i):
     rt(45)
     paralelogram(x, y, a, b, c)
     lt(45)
-    square(x+(a**2-b**2)**0.5-16, y+b+21, l, d)
+    square( x+ (a ** 2 - b ** 2) ** 0.5 - 16, y + b + 21, l, d)
     rt(90)
-    right_angled_triangle(x+(a**2-b**2)**0.5+l-16, y+l+21+l, e, f, g)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 + l - 16, y + l + 21 + l, e, f, g)
     lt(90)
-    right_angled_triangle(x+(a**2-b**2)**0.5+l+f-16, y+21, e, f, g)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 + l + f - 16, y + 21, e, f, g)
     rt(180)
     rt(90)
-    right_angled_triangle(x+(a**2-b**2)**0.5-25, y+b+l+e+21, e, f, g)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 - 25, y + b + l + e + 21, e, f, g)
     lt(90)
     right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5+f-25, y +21 + b + l, e, f, g)
     rt(180)
-    equilateral_triangle(x+(a**2-b**2)**0.5-24, y +b +l + e+21, h, i)
+    equilateral_triangle(x + (a ** 2 - b ** 2) ** 0.5 - 24, y + b +l + e + 21, h, i)
+
 #функция светофора
 def svetofor(x, y):
     #большой прямоугольник
@@ -239,6 +240,7 @@ def svetofor(x, y):
     #нижний прямоугольник
     rectangle(x + 30, y - 200, 40, 60, "gray")
 svetofor(0, -80)
+
 #функция чела
 def chel(x,y):
     #голова
@@ -246,7 +248,7 @@ def chel(x,y):
     #туловище
     equilateral_triangle(x - 15, y - 40 * math.sqrt(3), 80, "yellow")
     # руки
-    equilateral_triangle(x - 15,y - 20 * math.sqrt(3), 20, "black")
+    equilateral_triangle(x - 15,y - 20 * math.sqrt(3), 25, "black")
     equilateral_triangle(x + 45, y - 20 * math.sqrt(3), 20, "black")
     # ноги
     square(x, y - 40 * math.sqrt(3) - 15, 15, "black")
