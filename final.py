@@ -158,8 +158,8 @@ def equilateral_triangle(x, y, z, col):
 
 # ф-ция кощщки
 def cat(x, y):
-    rectangle(0, 0, 100, 50, "orange")
-    rectangle(x + 30, 0, 40, 50, "black")
+    rectangle(x, y, 100, 50, "orange")
+    rectangle(x + 30, y, 40, 50, "black")
     square(x + 30, y - 50, -30, "orange")
     square(x + 100, y - 50, -30, "orange")
     square(x + 100, y - 25, 50, "orange")
@@ -187,7 +187,7 @@ def house(x, y):
     right_angled_triangle(x + 125, y + 100, 106, 106, "rosy brown")
     lt(135)
     Circle(x + 50, y + 120, 15, "light cyan")
-house(100,100)
+house(100,-50)
 
 #функция рыбки
 def fish(x, y):
