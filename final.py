@@ -192,13 +192,13 @@ house(100,-50)
 #функция рыбки
 def fish(x, y):
     lt(45)
-    right_angled_triangle(x, y, 106, 106, "orange")
+    right_angled_triangle(x, y, 106, 106, "maroon")
     lt(90)
-    right_angled_triangle(x, y + 150, 106,106, "orange")
+    right_angled_triangle(x, y + 150, 106,106, "maroon")
     lt(90)
-    right_angled_triangle(x - 150, y, 106, 106, "orange")
+    right_angled_triangle(x - 150, y, 106, 106, "maroon")
     rt(135)
-    Circle(x + 25, y + 70, 15, "indigo")
+    Circle(x + 25, y + 70, 15, "lavender")
 fish(-200,100)
 
 #функция лисички
