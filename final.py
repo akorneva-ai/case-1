@@ -213,24 +213,25 @@ def lisiza(x,y, a, b, c, d, e, f, g, h, i, k):
     right_angled_triangle(x + a - 10, y + ((a ** 2 - (a / 2) ** 2) ** 0.5) + 1.75 * (f) - 25, h, i, k)
     lt(180)
 lisiza(-400, -350, 100, 'crimson', 50, 120, 'orange', 50, 'grey', 40, 40, 'red')
+rt(2)
 
 #функция ракеты
 def raketa(x, y, a, b, c, l, d,  e, f, g, h, i):
     rt(45)
     paralelogram(x, y, a, b, c)
     lt(45)
-    square( x+ (a ** 2 - b ** 2) ** 0.5 - 25, y + b + 21, l, d)
+    square( x+ (a ** 2 - b ** 2) ** 0.5 - 15, y + b + 21, l, d)
     rt(90)
-    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 + l - 30, y + l + 21 + l, e, f, g)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 + l - 15, y + l + 21 + l, e, f, g)
     lt(90)
-    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 + l + f - 30, y + 25, e, f, g)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 + l + f - 15, y + 22, e, f, g)
     rt(180)
     rt(90)
-    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 - 35, y + b + l + e + 21, e, f, g)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5 - 25, y + b + l + e + 21, e, f, g)
     lt(90)
-    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5+f-35, y +21 + b + l, e, f, g)
+    right_angled_triangle(x + (a ** 2 - b ** 2) ** 0.5+f-25, y +21 + b + l, e, f, g)
     rt(180)
-    equilateral_triangle(x + (a ** 2 - b ** 2) ** 0.5 - 36, y + b +l + e + 18, h, i)
+    equilateral_triangle(x + (a ** 2 - b ** 2) ** 0.5 - 25, y + b +l + e + 20, h, i)
 raketa(-400, -120, 100, 50, 'turquoise', 50, 'red', 50, 70, 'blue', 70, 'gold')
 
 #функция светофора
