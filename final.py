@@ -3,7 +3,6 @@ import math
 shape("turtle")
 pensize(1)
 pu()
-tracer(0)
 screensize(2000, 2000)
 def triangle_isosceles(x, y, a, b, col):
     """
